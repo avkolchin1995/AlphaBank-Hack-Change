@@ -1,0 +1,135 @@
+.profile-employee {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  row-gap: 24px;
+  column-gap: 40px;
+
+  padding: 30px 40px;
+}
+
+.subtitle {
+  text-transform: uppercase;
+  font-size: 14px;
+  color: rgba(93, 100, 110, 0.4);
+
+  margin-bottom: 16px;
+}
+
+.profile-employee__work-card {
+  width: clamp(200px, 80%, 450px);
+}
+
+.profile-employee__services-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.profile-employee__services-item:hover {
+ opacity: 0.6;
+}
+
+.profile-employee__services-img {
+  width: 40px;
+}
+
+.profile-employee__input {
+  background-color: rgba(15, 25, 55, 0.1);
+  border: none !important;
+}
+
+.profile-employee__input:hover {
+  background-color: rgba(38, 55, 88, 0.06) !important;
+  border: none !important;
+}
+
+.profile-employee__input:active {
+  background-color: #ffffff !important;
+  border: none !important;
+  outline: none !important;
+}
+
+.profile-employee__button {
+  height: 50px;
+  font-size: 18px;
+  border-radius: 8px;
+  background: #000000;
+  color: #fff;
+  border: none;
+
+  margin-bottom: 32px;
+}
+
+.profile-employee__button:disabled {
+  background-color:  rgba(38, 55, 88, 0.06);
+}
+
+.profile-employee__button:disabled:hover {
+  background-color:  rgba(38, 55, 88, 0.1) !important;
+}
+
+.profile-employee__button:active {
+  color: white !important;
+}
+
+.profile-employee__button:hover {
+  color: #ddd6d6 !important;
+}
+
+.profile-employee__button:hover {
+  background-color: #332929 !important;
+}
+
+.profile-employee__work {
+  grid-column: 2/ -1;
+  grid-row: 1 / 2;
+}
+
+.profile-employee__links-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  font-size: 14px;
+
+  margin-bottom: 8px;
+}
+
+.profile-employee__links-item:hover {
+  opacity: 0.6;
+}
+
+.profile-employee__links-item::before {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 36px;
+  height: 36px;
+
+  color: white;
+
+  border-radius: 8px;
+}
+
+.profile-employee__links-item--know::before {
+  content: 'Б';
+  background-color: rgba(67, 33, 186, 0.8);
+}
+
+.profile-employee__links-item--click::before {
+  content: 'A';
+  background-color: #EF3124FF;
+}
+
+.profile-employee__links-item--con::before {
+  content: 'C';
+  background-color: rgba(25, 15, 55, 0.2);
+}
+
+.profile-employee__work-title {
+  margin: 0 0 24px;
+}

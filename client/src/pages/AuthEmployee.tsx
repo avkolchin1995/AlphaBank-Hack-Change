@@ -27,7 +27,7 @@ const AuthEmployee = () => {
             ) {
                 message.success('Добро пожаловать!');
                 setTimeout(() => {
-                    navigate('/dashboard');
+                    navigate('/profileEmployee');
                 }, 800);
             } else {
                 message.error('Неверный логин или пароль');
