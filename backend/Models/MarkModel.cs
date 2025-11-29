@@ -14,7 +14,7 @@ namespace AlphaOfferService.Models
             if (!File.Exists(modelPath))
                 throw new FileNotFoundException($"ONNX модель по пути '{modelPath}' не найдена!");
 
-            //_session = new InferenceSession(modelPath);
+            _session = new InferenceSession(modelPath);
         }
 
         public async Task<double> CalculateClientIncome(IClient client)
