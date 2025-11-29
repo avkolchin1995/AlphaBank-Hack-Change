@@ -21,9 +21,10 @@ const Header = () => {
             <ul className={styles.header__userList}>
                 <li className={styles.header__userItem}>
                     <img
+                        className={styles.header__bell}
                         src={'./icons/notification.svg'}
-                        width={40}
-                        height={40}
+                        width={30}
+                        height={30}
                         alt={'icon'}
                     />
                 </li>

@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Input, Button, message } from 'antd';
+import { Button, Input, message } from 'antd';
 import { useNavigate } from 'react-router-dom';
 import '../styles/profile-employee.scss';
 import { Loader } from '../components/UI';
@@ -14,23 +14,20 @@ const ProfileEmployee = () => {
     const [clientId, setClientId] = useState('');
 
     const [_, error, getIncome] = useFetching(async (clientId: string) => {
-        const response = await clientService.getClientIncome(clientId);
-        console.log(response);
-        return response;
+        return await clientService.getClientIncome(clientId);
     });
 
     const handlePassportSearch = async () => {
         setLoading(true);
-
-        const data = await getIncome(clientId);
-
-        if (error) {
-            console.log(error);
-            message.error('Клиент не найден');
-        } else {
-            navigate('/client-profile', {
+        try {
+            const data = await getIncome(clientId);
+            navigate(`/profileClient/${clientId}`, {
                 state: { clientData: data },
             });
+        } catch {
+            message.error('Клиент не найден');
+        } finally {
+            setLoading(false);
         }
     };
 
