@@ -1,17 +1,19 @@
 ﻿using AlphaOfferService.AlphaStructure.Clients;
+using Microsoft.EntityFrameworkCore;
 
 namespace AlphaOfferService.AlphaStructure.Entities
 {
-    public class AlphaBankClientRepository : IClientRepository
+    public class AlphaBankClientRepository : DbContext, IClientRepository
     {
-        private readonly List<AlphaBankClient> _clients =
-        [
-            new AlphaBankClient("1", 26,  Gender.Male,  11.484045f, true, 50103.000000f, 11.231901f,  false, 0.352713f, 8.376090f, 9.488444f)
-        ];
+        public DbSet<AlphaBankClient> Clients { get; set; }
+
+        public AlphaBankClientRepository(DbContextOptions<AlphaBankClientRepository> options) : base(options)
+        {
+        }
 
         public async Task<IClient?> GetClientByIdAsync(string clientId)
         {
-            return await Task.FromResult(_clients.FirstOrDefault(c => c.Id == clientId));
+            return await Clients.FirstOrDefaultAsync(c => c.Id == clientId);
         }
     }
 }

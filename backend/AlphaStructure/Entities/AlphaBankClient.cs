@@ -4,52 +4,26 @@ namespace AlphaOfferService.AlphaStructure.Entities
 {
     public class AlphaBankClient : IClient
     {
-        public string Id { get; }
+        public string Id { get; set; } = null!;
 
-        public float Age { get; }
+        public float Age { get; set; }
 
-        public Gender Gender { get; }
+        public Gender Gender { get; set; }
 
-        public float AverageSalary { get; }
+        public float AverageSalary { get; set; }
 
-        public bool IsSalaryKnown { get; }
+        public bool IsSalaryKnown { get; set; }
 
-        public float AverageRegionIncomePerCapita { get; }
+        public float AverageRegionIncomePerCapita { get; set; }
 
-        public float AverageCurrentCreditTurnover { get; }
+        public float AverageCurrentCreditTurnover { get; set; }
 
-        public bool IsNaTurnOtherCrAvgAct { get; }
+        public bool IsNaTurnOtherCrAvgAct { get; set; }
 
-        public float SupermarketTransactionCategoryPercent { get; }
+        public float SupermarketTransactionCategoryPercent { get; set; }
 
-        public float RestaurantTransactionCategoryPercent { get; }
+        public float RestaurantTransactionCategoryPercent { get; set; }
 
-        public float AverageMonthlyTravelCategoryTransactionAmountOverYear { get; }
-
-        public AlphaBankClient(
-            string id,
-            float age,
-            Gender gender,
-            float averageSalary,
-            bool isSalaryKnown,
-            float averageRegionIncomePerCapita,
-            float averageCurrentCreditTurnover,
-            bool isNaTurnOtherCrAvgAct,
-            float supermarketTransactionCategoryPercent,
-            float restaurantTransactionCategoryPercent,
-            float averageMonthlyTravelCategoryTransactionAmountOverYear)
-        {
-            Id = id;
-            Age = age;
-            Gender = gender;
-            AverageSalary = averageSalary;
-            IsSalaryKnown = isSalaryKnown;
-            AverageRegionIncomePerCapita = averageRegionIncomePerCapita;
-            AverageCurrentCreditTurnover = averageCurrentCreditTurnover;
-            IsNaTurnOtherCrAvgAct = isNaTurnOtherCrAvgAct;
-            SupermarketTransactionCategoryPercent = supermarketTransactionCategoryPercent;
-            RestaurantTransactionCategoryPercent = restaurantTransactionCategoryPercent;
-            AverageMonthlyTravelCategoryTransactionAmountOverYear = averageMonthlyTravelCategoryTransactionAmountOverYear;
-        }
+        public float AverageMonthlyTravelCategoryTransactionAmountOverYear { get; set; }
     }
 }
