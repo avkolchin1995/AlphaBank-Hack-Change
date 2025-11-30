@@ -25,7 +25,6 @@ const AuthEmployee = () => {
                 login === mockEmployee.login &&
                 password === mockEmployee.password
             ) {
-                message.success('Добро пожаловать!');
                 setTimeout(() => {
                     navigate('/profileEmployee');
                 }, 800);

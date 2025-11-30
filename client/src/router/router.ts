@@ -3,6 +3,7 @@ import React from 'react';
 import AuthEmployee from '../pages/AuthEmployee.tsx';
 import ProfileEmployee from '../pages/ProfileEmployee.tsx';
 import { Layout } from '../components/UI';
+import ProfileClient from '../pages/ProfileClient.tsx';
 
 export const router = createBrowserRouter([
     {
@@ -23,6 +24,10 @@ export const router = createBrowserRouter([
             {
                 path: '/profileEmployee',
                 element: React.createElement(ProfileEmployee),
+            },
+            {
+                path: '/profileClient/:id',
+                element: React.createElement(ProfileClient),
             },
         ],
     },

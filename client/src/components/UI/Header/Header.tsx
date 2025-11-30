@@ -21,18 +21,19 @@ const Header = () => {
             <ul className={styles.header__userList}>
                 <li className={styles.header__userItem}>
                     <img
-                        src={'./icons/notification.svg'}
-                        width={40}
-                        height={40}
+                        className={styles.header__bell}
+                        src={'/icons/notification.svg'}
+                        width={30}
+                        height={30}
                         alt={'icon'}
                     />
                 </li>
                 <li className={styles.header__userItem}>
                     <img
                         className={styles.header__userFace}
-                        src={'./face.JPG'}
-                        width={40}
-                        height={40}
+                        src={'/images/face.JPG'}
+                        width={50}
+                        height={50}
                         alt={'icon'}
                     />
                 </li>
