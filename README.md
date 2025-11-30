@@ -89,7 +89,7 @@ sudo apt update && sudo apt upgrade -y
 sudo apt install -y nodejs
 
 # 2. Запуск backend
-Разархивировать win-x64.zip
+Разархивировать win-x64.zip (он расположен в Releases backend-server v2.0)
 Запустить AlphaOfferService
 
 # 3. Запуск frontend
