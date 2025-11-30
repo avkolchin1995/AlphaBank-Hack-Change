@@ -22,7 +22,7 @@ const ProfileEmployee = () => {
         try {
             const data = await getIncome(clientId);
             navigate(`/profileClient/${clientId}`, {
-                state: { clientData: data },
+                state: { clientData: data, clientId: clientId },
             });
         } catch {
             message.error('Клиент не найден');
@@ -68,8 +68,8 @@ const ProfileEmployee = () => {
                                 className='profile-employee__services-img'
                                 src={service.img}
                                 alt={service.title}
-                                width={40}
-                                height={30}
+                                width={50}
+                                height={40}
                             />
                             {service.title}
                         </li>

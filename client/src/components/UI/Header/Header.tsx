@@ -22,7 +22,7 @@ const Header = () => {
                 <li className={styles.header__userItem}>
                     <img
                         className={styles.header__bell}
-                        src={'./icons/notification.svg'}
+                        src={'/icons/notification.svg'}
                         width={30}
                         height={30}
                         alt={'icon'}
@@ -31,9 +31,9 @@ const Header = () => {
                 <li className={styles.header__userItem}>
                     <img
                         className={styles.header__userFace}
-                        src={'./face.JPG'}
-                        width={40}
-                        height={40}
+                        src={'/images/face.JPG'}
+                        width={50}
+                        height={50}
                         alt={'icon'}
                     />
                 </li>

@@ -1,22 +1,24 @@
 .profile-employee {
   display: grid;
   grid-template-columns: 1fr 2fr;
-  row-gap: 24px;
-  column-gap: 40px;
+  row-gap: 32px;
+  column-gap: 80px;
 
-  padding: 30px 40px;
+  padding: 30px 60px;
+  min-width: 100%;
 }
 
 .subtitle {
   text-transform: uppercase;
-  font-size: 14px;
+  font-weight: 600;
+  font-size: 18px;
   color: rgba(93, 100, 110, 0.4);
 
-  margin-bottom: 16px;
+  margin-right: 16px;
 }
 
 .profile-employee__work-card {
-  width: clamp(200px, 80%, 450px);
+  width: clamp(200px, 80%, 500px);
 }
 
 .profile-employee__services-item {
@@ -24,7 +26,7 @@
   align-items: center;
   gap: 8px;
 
-  font-size: 14px;
+  font-size: 18px;
   font-weight: 500;
 }
 
@@ -93,7 +95,7 @@
   align-items: center;
   gap: 16px;
 
-  font-size: 14px;
+  font-size: 18px;
 
   margin-bottom: 8px;
 }
@@ -107,8 +109,8 @@
   align-items: center;
   justify-content: center;
 
-  width: 36px;
-  height: 36px;
+  width: 46px;
+  height: 46px;
 
   color: white;
 
